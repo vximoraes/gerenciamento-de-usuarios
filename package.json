@@ -1,0 +1,15 @@
+{
+  "name": "gerenciamento-de-usuarios",
+  "version": "1.0.0",
+  "description": "Desenvolver uma aplicação CLI (Command Line Interface) em TypeScript que permita gerenciar um banco de dados simples de usuários (manipulado em memória e gravado em um arquivo CSV).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
