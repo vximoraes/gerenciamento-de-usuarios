@@ -1,5 +1,5 @@
 import { Command } from "commander"
-import * as Papeis from '../seeds/papeisSeeds'
+import { adm1 } from "../seeds/usuariosSeeds";
 
 // Cadastrar Usuário
 
@@ -13,10 +13,9 @@ program
     .argument("<password>", "User password")
     .argument("<age>", "User age")
     .argument("<role>", "User role")
-    .action((name, email, password, age, role) => {
-        Papeis.cadastrarUsuario(name, email, password, age, role);
+    .action((nome, email, senha, papel, status) => {
+        adm1.cadastrarUsuario(nome, email, senha, papel, status);
     })
-
 
 program.parse()
 
