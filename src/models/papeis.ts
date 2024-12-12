@@ -1,5 +1,5 @@
 // Enum para os papéis dos usuários.
-export enum Papel {
+export enum EnumPapel {
     ADMINISTRADOR = 'Administrador',
     CONVIDADO     = 'Convidado',
     PROFESSOR     = 'Professor'
@@ -7,6 +7,10 @@ export enum Papel {
 
 // Interface do modelo de papéis dos usuários.
 export interface ModeloPapel {
-    papel: Papel;
-    permissoes: string[]
+    papel        : EnumPapel
+    permListar   : boolean
+    permListarId : boolean
+    permCadastrar: boolean
+    permAlterar  : boolean
+    permDeletar  : boolean
 }

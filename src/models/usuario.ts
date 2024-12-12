@@ -1,4 +1,4 @@
-import { Papel } from "./papeis"
+import { Papel } from "../services/permissoesServices"
 
 export interface Usuario {
     id           : string

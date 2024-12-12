@@ -1,8 +1,6 @@
-import { ModeloPapel } from "../models/papeis"
-import { Papel } from "../models/papeis"
+import { Papel } from "../services/permissoesServices"
+import { EnumPapel } from "../models/papeis"
 
-const papeisSeeds: ModeloPapel[] = [
-    { papel: Papel.CONVIDADO    , permissoes: ['Listar produtos', 'Listar produtos por id']},
-    { papel: Papel.ADMINISTRADOR, permissoes: ['Listar produtos', 'Listar produtos por id', 'Cadastrar produtos', 'Alterar produtos', 'Deletar produtos'] },
-    { papel: Papel.PROFESSOR    , permissoes: ['Listar produtos', 'Listar produtos por id'] }
-]
+export const papelAdm       = new Papel(EnumPapel.ADMINISTRADOR, true , true , true , true , true)
+export const papelConvidado = new Papel(EnumPapel.CONVIDADO    , true , true , false, false, false)
+export const papelProfessor = new Papel(EnumPapel.PROFESSOR    , false, false, false, true , false)
